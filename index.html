@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bias Fajar Khaliq, Water Treatment Engineer and HSE Specialist based in Cianjur, Indonesia">
+    <title>Bias Fajar Khaliq - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+            line-height: 1.5;
+            color: #ddd;
+            background: #0a0a0a;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+
+        .header-panel {
+            text-align: center;
+            padding: 1rem 0;
+            border-radius: 16px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-panel h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-panel p {
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-bottom: 0.2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.7rem;
+            margin-top: 0.6rem;
+            flex-wrap: wrap;
+            padding: 0 0.8rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 0.6rem 1rem;
+            border: 1px solid #333;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button i {
+            margin-right: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-button:hover {
+            background: #333;
+            transform: translateY(-2px);
+        }
+
+        .nav-panel {
+            background: #1a1a1a;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 999;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0.8rem 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ddd;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.6rem 1rem;
+            border-radius: 12px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        .nav-links i {
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .resume-section#about {
+            padding: 180px 0 5px;
+            margin-top: 0;
+        }
+
+        .resume-section {
+            padding: 5px 0 5px;
+            margin-top: 0;
+        }
+
+        .section-panel {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .section-panel:hover {
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-bottom: 0.7rem;
+        }
+
+        .resume-card, .skill-card, .certificate-card {
+            background: #222;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 0.8rem;
+            margin: 0.4rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .resume-card:hover, .skill-card:hover, .certificate-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .resume-title, .certificate-group h3 {
+            font-size: 1rem;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem;
+            background: #333;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .resume-title i, .certificate-group h3 i {
+            font-size: 0.85rem;
+            transition: transform 0.3s ease;
+        }
+
+        .resume-title.active i, .certificate-group h3.active i {
+            transform: rotate(180deg);
+        }
+
+        .resume-content, .certificate-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+            color: #aaa;
+            padding-top: 0;
+            font-size: 0.9rem;
+        }
+
+        .resume-content.is-visible, .certificate-content.is-visible {
+            max-height: 600px;
+            opacity: 1;
+            padding-top: 0.8rem;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: space-between;
+        }
+
+        .skill-card {
+            flex: 1 1 calc(33.33% - 0.5rem);
+            text-align: center;
+        }
+
+        .skill-card i {
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
+            color: #fff;
+        }
+
+        .skill-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .skill-card p {
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+
+        .progress-bar {
+            background: #333;
+            height: 4px;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 0.4rem;
+        }
+
+        .progress {
+            background: #fff;
+            height: 100%;
+            transition: width 0.8s ease-in-out;
+        }
+
+        .certificate-group {
+            margin-bottom: 0.5rem;
+        }
+
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+        }
+
+        .certificate-grid.is-visible {
+            max-height: 1000px;
+            opacity: 1;
+            padding-top: 0.8rem;
+        }
+
+        .certificate-card p {
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 150px;
+            right: 20px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 3rem;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            z-index: 998;
+        }
+
+        .scroll-top.visible {
+            display: flex;
+            opacity: 1;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-2px);
+            background: #333;
+        }
+
+        .footer-spacer {
+            height: 5px;
+        }
+
+        .resume-section#skills .footer-spacer {
+            height: 100px;
+        }
+        
+        .resume-section#certificates .footer-spacer {
+            height: 100px;
+        }
+
+        /* Media Queries for Tablet */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 12px;
+            }
+
+            .header-panel {
+                padding: 1.2rem 0;
+            }
+
+            .header-panel h1 {
+                font-size: 1.5rem;
+            }
+
+            .header-panel p {
+                font-size: 0.8rem;
+            }
+
+            .cta-button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+                border-radius: 16px;
+            }
+
+            .cta-button i {
+                font-size: 1rem;
+            }
+
+            .social-links {
+                gap: 0.6rem;
+                padding: 0 0.6rem;
+            }
+
+            .nav-links a {
+                font-size: 0.8rem;
+                padding: 0.5rem 0.7rem;
+            }
+
+            .nav-links i {
+                font-size: 1.2rem;
+            }
+
+            .resume-section#about {
+                padding: 180px 0 5px;
+            }
+
+            .resume-section {
+                padding: 5px 0 5px;
+            }
+
+            .section-panel {
+                padding: 0.6rem;
+                margin-bottom: 0.3rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+                margin-bottom: 0.7rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.75rem;
+                margin-bottom: 0.6rem;
+            }
+
+            .resume-card, .skill-card, .certificate-card {
+                padding: 0.6rem;
+                margin: 0.2rem 0;
+                border-radius: 10px;
+            }
+
+            .resume-title, .certificate-group h3 {
+                font-size: 0.9rem;
+            }
+
+            .resume-content, .skill-card p, .certificate-card p, .certificate-content {
+                font-size: 0.8rem;
+            }
+
+            .skills-grid {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+
+            .skill-card {
+                flex: 1 1 100%;
+            }
+
+            .certificate-grid {
+                grid-template-columns: 1fr;
+                gap: 0.4rem;
+            }
+
+            .scroll-top {
+                bottom: 100px;
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
+
+            .footer-spacer {
+                height: 5px;
+            }
+
+            .resume-section#skills .footer-spacer {
+                height: 5px;
+            }
+            
+            resume-section#certificates .footer-spacer {
+                height: 100px;
+            }
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 480px) {
+            .header-panel {
+                padding: 1.2rem 0;
+            }
+
+            .header-panel h1 {
+                font-size: 1.5rem;
+            }
+
+            .header-panel p {
+                font-size: 0.8rem;
+            }
+
+            .cta-button {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            .cta-button i {
+                font-size: 1rem;
+            }
+
+            .social-links {
+                gap: 0.6rem;
+                padding: 0 0.6rem;
+            }
+
+            .resume-section#about {
+                padding: 180px 0 5px;
+            }
+
+            .resume-section {
+                padding: 5px 0 5px;
+            }
+
+            .section-panel {
+                padding: 0.6rem;
+                margin-bottom: 0.3rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+                margin-bottom: 0.7rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.75rem;
+                margin-bottom: 0.6rem;
+            }
+
+            .resume-card, .skill-card, .certificate-card {
+                padding: 0.6rem;
+                margin: 0.2rem 0;
+            }
+
+            .resume-title, .certificate-group h3 {
+                font-size: 0.9rem;
+            }
+
+            .resume-content, .skill-card p, .certificate-card p, .certificate-content {
+                font-size: 0.8rem;
+            }
+
+            .scroll-top {
+                bottom: 100px;
+                width: 55px;
+                height: 55px;
+                font-size: 1.6rem;
+            }
+
+            .footer-spacer {
+                height: 5px;
+            }
+
+            .resume-section#skills .footer-spacer {
+                height: 5px;
+            }
+            
+            resume-section#certificates .footer-spacer {
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-panel container">
+            <h1>Bias Fajar Khaliq</h1>
+            <p>Water Treatment Engineer | HSE & K3 Specialist</p>
+            <p>biasfajar3@gmail.com | +62 855-555-5684 | Cianjur, Indonesia</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/biasfajarkhaliq" class="cta-button"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://instagram.com/2.khaliq" class="cta-button"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://twitter.com/bias_khaliq" class="cta-button"><i class="fab fa-twitter"></i> Twitter</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="resume-section" id="about">
+        <div class="container">
+            <div class="section-panel">
+                <h2 class="section-title">About Me</h2>
+                <div class="resume-card">
+                    <h3 class="resume-title" onclick="toggleContent(this)">About Me <i class="fas fa-chevron-down"></i></h3>
+                    <div class="resume-content">
+                        <p>Civil Engineering graduate with over eight years of expertise in water treatment systems at PT Pou Yuen Indonesia. Specialize in optimizing industrial processes, ensuring K3 compliance, and conducting workplace behavioral analysis to enhance safety and efficiency. My technical proficiency includes water quality management, data-driven process improvements, and sustainable infrastructure solutions. Skilled in leadership, stakeholder consultation, and leveraging psychological principles to foster a safety-first culture. Passionate about driving innovation, I aim to deliver impactful, environmentally responsible solutions through strategic analysis and collaborative teamwork.</p>
+                    </div>
+                </div>
+                <div class="resume-card">
+                    <h3 class="resume-title" onclick="toggleContent(this)">Career Objective <i class="fas fa-chevron-down"></i></h3>
+                    <div class="resume-content">
+                        <p>Seeking a leadership role in water treatment engineering and HSE management to drive sustainable solutions, enhance workplace safety, and spearhead innovative projects through strategic analysis and collaborative leadership.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-spacer"></div>
+        </div>
+    </section>
+
+    <section class="resume-section" id="experience">
+        <div class="container">
+            <div class="section-panel">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="resume-card">
+                    <h3 class="resume-title" onclick="toggleContent(this)">Water Treatment Engineering Staff, PT Pou Yuen Indonesia (Sep 2020 - Present) <i class="fas fa-chevron-down"></i></h3>
+                    <div class="resume-content">
+                        <ul>
+                            <li>Streamlined water treatment processes, ensuring reliable supply for industrial operations.</li>
+                            <li>Conducted in-depth analysis of workplace systems to identify inefficiencies, implementing data-driven solutions to enhance operational reliability.</li>
+                            <li>Fostered a safety-first culture using psychological principles, reducing incidents through behavior-based interventions and K3 compliance.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="resume-card">
+                    <h3 class="resume-title" onclick="toggleContent(this)">Nutrition & Aquaria Engineering Staff, PT Pou Yuen Indonesia (Aug 2017 - Sep 2020) <i class="fas fa-chevron-down"></i></h3>
+                    <div class="resume-content">
+                        <ul>
+                            <li>Managed water treatment for drinking water and aquaculture, ensuring compliance with food safety standards.</li>
+                            <li>Collaborated with cross-functional teams to align processes with regulatory requirements, enhancing operational efficiency.</li>
+                            <li>Monitored water quality parameters (pH, salinity, oxygen) to maintain optimal conditions, supporting HACCP compliance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-spacer"></div>
+        </div>
+    </section>
+
+    <section class="resume-section" id="education">
+        <div class="container">
+            <div class="section-panel">
+                <h2 class="section-title">Education & Research</h2>
+                <div class="resume-card">
+                    <h3 class="resume-title" onclick="toggleContent(this)">Bachelor of Civil Engineering, Nusa Putra University (Aug 2018 - Aug 2022) <i class="fas fa-chevron-down"></i></h3>
+                    <div class="resume-content">
+                        <p>GPA: 3.08 | Specialized in water treatment, distribution infrastructure, and ensuring K3 compliance, with a focus on sustainable engineering solutions.</p>
+                    </div>
+                </div>
+                <div class="resume-card">
+                    <h3 class="resume-title" onclick="toggleContent(this)">Analysis of Domestic Wastewater Utilization (2021) <i class="fas fa-chevron-down"></i></h3>
+                    <div class="resume-content">
+                        <p>Developed a wastewater management system using IPAL for the shoe manufacturing industry, emphasizing environmental sustainability and regulatory compliance.</p>
+                    </div>
+                </div>
+                <div class="resume-card">
+                    <h3 class="resume-title" onclick="toggleContent(this)">Evaluation of Clean Water Needs (2022) <i class="fas fa-chevron-down"></i></h3>
+                    <div class="resume-content">
+                        <p>Evaluated clean water requirements for industrial operations at PT. Pou Yuen Indonesia Cianjur, utilizing geometric projection methods to forecast employee growth and water demand for sustainable supply.</p>
+                    </div>
+                </div>
+                <div class="resume-card">
+                    <h3 class="resume-title" onclick="toggleContent(this)">Mathematical and Psychological Analysis of Online Slot Gambling (2024) <i class="fas fa-chevron-down"></i></h3>
+                    <div class="resume-content">
+                        <p>Analyzed online slot gambling using probability theory and behavioral analysis, demonstrating negative expected value for players and identifying psychological factors driving addiction to inform evidence-based educational interventions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-spacer"></div>
+        </div>
+    </section>
+
+    <section class="resume-section" id="skills">
+        <div class="container">
+            <div class="section-panel">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Leadership & Consultation</h3>
+                        <p>Team Leadership, Conflict Resolution, Stakeholder Engagement</p>
+                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Workplace Analysis & Psychology</h3>
+                        <p>Behavioral Analysis, Safety Psychology, Risk Assessment</p>
+                        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-water"></i>
+                        <h3>Water Treatment Systems</h3>
+                        <p>Water Quality Management, Sustainable Infrastructure</p>
+                        <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>HSE Compliance</h3>
+                        <p>K3 Implementation, Safety Standards</p>
+                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-drafting-compass"></i>
+                        <h3>AutoCAD</h3>
+                        <p>Technical Drawing, Design Optimization</p>
+                        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Data Analysis</h3>
+                        <p>Data-Driven Insights, Process Improvement</p>
+                        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-spacer"></div>
+        </div>
+    </section>
+
+    <section class="resume-section" id="certificates">
+        <div class="container">
+            <div class="section-panel">
+                <h2 class="section-title">Certificates</h2>
+                <p class="section-subtitle">Explore my professional certifications</p>
+                <div class="certificate-group">
+                    <h3 onclick="toggleCertificateGroup(this)">K3 and Audit <i class="fas fa-chevron-down"></i></h3>
+                    <div class="certificate-grid">
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>SMK3 Audit and Techniques (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Certified in auditing occupational health and safety management systems, ensuring compliance with safety standards.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>ISO 19011:2018 - Auditing Management Systems (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Trained in international guidelines for auditing management systems per ISO 19011:2018 standards.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>Inspection Techniques (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Skilled in safety inspection techniques to ensure compliance with K3 and HSE standards.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>Hazard Identification (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Proficient in identifying and evaluating workplace hazards to mitigate risks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate-group">
+                    <h3 onclick="toggleCertificateGroup(this)">HSE and Safety Management <i class="fas fa-chevron-down"></i></h3>
+                    <div class="certificate-grid">
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>HSE Management System (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Trained in implementing best practices for health, safety, and environmental management systems.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>HSE Plan (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Skilled in developing HSE plans to ensure workplace safety and environmental compliance.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>Behavior-Based Safety (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Trained in behavior-based safety approaches to prevent workplace accidents through observation and behavioral modification.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>Management of Change (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Proficient in managing process or system changes to ensure safety and control.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>Safety Meeting Facilitation (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Skilled in facilitating safety meetings to enhance team awareness and coordination.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>Safety Leadership (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Developed leadership skills to promote a safety-first culture in the workplace.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>Ergonomics (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Trained in ergonomic design to prevent workplace injuries and enhance productivity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate-group">
+                    <h3 onclick="toggleCertificateGroup(this)">Industry and Food Safety <i class="fas fa-chevron-down"></i></h3>
+                    <div class="certificate-grid">
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>HACCP - Hazard Analysis Critical Control Point (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Certified in food safety management, identifying hazards and establishing critical control points in production.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>Chemical Management (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Skilled in safe handling, storage, and disposal of chemicals in industrial settings.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>H2S - Hydrogen Sulfide (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Trained in managing risks associated with hydrogen sulfide exposure in industrial environments.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>Confined Space Safety (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Proficient in safety procedures for working in confined spaces, including risk management and evacuation.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>K3 for Oil and Gas (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Trained in occupational health and safety for the oil and gas industry.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>Hazardous Waste Management (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Skilled in managing hazardous and toxic waste to comply with environmental regulations.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>Hazard and Operability Study (HAZOP) (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Proficient in systematic hazard identification and evaluation in industrial processes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate-group">
+                    <h3 onclick="toggleCertificateGroup(this)">Languages <i class="fas fa-chevron-down"></i></h3>
+                    <div class="certificate-grid">
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>English Proficiency Score (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Achieved a high proficiency score in English, demonstrating advanced communication skills in professional settings.</p>
+                            </div>
+                        </div>
+                        <div class="certificate-card" onclick="toggleCertificate(this)">
+                            <p>TOEFL (Jul 2022)</p>
+                            <div class="certificate-content">
+                                <p>Completed TOEFL, showcasing fluency in academic and professional English.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-spacer"></div>
+        </div>
+    </section>
+    
+    <nav class="nav-panel">
+        <ul class="nav-links">
+            <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+            <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+            <li><a href="#certificates"><i class="fas fa-certificate"></i> Certificates</a></li>
+        </ul>
+    </nav>
+
+    <div class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Page loaded successfully. All content should be visible.');
+            updateScrollTopVisibility();
+        });
+
+        window.addEventListener('scroll', updateScrollTopVisibility);
+
+        function updateScrollTopVisibility() {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (window.scrollY > 100) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight - 10;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        function toggleContent(element) {
+            const content = element.nextElementSibling;
+            const isVisible = content.classList.contains('is-visible');
+            document.querySelectorAll('.resume-content.is-visible').forEach(el => {
+                el.classList.remove('is-visible');
+                el.previousElementSibling.classList.remove('active');
+            });
+            if (!isVisible) {
+                content.classList.add('is-visible');
+                element.classList.add('active');
+            }
+        }
+
+        function toggleCertificate(element) {
+            const content = element.querySelector('.certificate-content');
+            const isVisible = content.classList.contains('is-visible');
+            document.querySelectorAll('.certificate-content.is-visible').forEach(el => {
+                el.classList.remove('is-visible');
+            });
+            if (!isVisible) {
+                content.classList.add('is-visible');
+            }
+        }
+
+        function toggleCertificateGroup(element) {
+            const content = element.nextElementSibling;
+            const isVisible = content.classList.contains('is-visible');
+            document.querySelectorAll('.certificate-grid.is-visible').forEach(el => {
+                el.classList.remove('is-visible');
+                el.previousElementSibling.classList.remove('active');
+            });
+            if (!isVisible) {
+                content.classList.add('is-visible');
+                element.classList.add('active');
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
