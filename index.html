@@ -537,8 +537,21 @@
             resume-section#certificates .footer-spacer {
                 height: 100px;
             }
-        }
-    </style>
+            /* Hilangkan efek lapisan biru dari klik/tap/focus */
+            a, button, .cta-button, .nav-links a {
+                outline: none !important;
+                box-shadow: none !important;
+                -webkit-tap-highlight-color: transparent;
+                -webkit-focus-ring-color: transparent;
+                -webkit-user-select: none;
+             }
+
+             *:focus {
+                outline: none !important;
+             box-shadow: none !important;
+             }
+             }
+     </style>
 </head>
 <body>
     <header>
